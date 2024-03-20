@@ -1,6 +1,8 @@
-const bcrypt = require('bcrypt');
-const Teacher = require('../models/teacherSchema.js');
-const Subject = require('../models/subjectSchema.js');
+import bcrypt from "bcrypt";
+import Teacher from "../models/teacherSchema.js";
+// const Teacher = require('../models/teacherSchema.js');
+import Subject from "../models/subjectSchema.js";
+// const Subject = require('../models/subjectSchema.js');
 
 const teacherRegister = async (req, res) => {
     const { name, email, password, role, school, teachSubject, teachSclass } = req.body;
@@ -191,8 +193,7 @@ const teacherAttendance = async (req, res) => {
         res.status(500).json(error)
     }
 };
-
-module.exports = {
+export default {
     teacherRegister,
     teacherLogIn,
     getTeachers,

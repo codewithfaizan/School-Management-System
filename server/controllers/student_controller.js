@@ -1,6 +1,8 @@
-const bcrypt = require('bcrypt');
-const Student = require('../models/studentSchema.js');
-const Subject = require('../models/subjectSchema.js');
+import bcrypt from "bcrypt";
+// const Student = require('../models/studentSchema.js');
+// const Subject = require('../models/subjectSchema.js');
+import Subject from "../models/subjectSchema.js";
+import Student from "../models/studentSchema.js"
 
 const studentRegister = async (req, res) => {
     try {
@@ -272,7 +274,7 @@ const removeStudentAttendance = async (req, res) => {
 };
 
 
-module.exports = {
+export default {
     studentRegister,
     studentLogIn,
     getStudents,

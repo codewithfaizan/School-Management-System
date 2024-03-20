@@ -1,29 +1,17 @@
-const router = require('express').Router();
+import express from "express";
+
+const router = express();
 
 // const { adminRegister, adminLogIn, deleteAdmin, getAdminDetail, updateAdmin } = require('../controllers/admin-controller.js');
 
-const { adminRegister, adminLogIn, getAdminDetail} = require('../controllers/admin-controller.js');
+import { adminRegister, adminLogIn, getAdminDetail } from '../controllers/admin-controller.js';
 
-const { sclassCreate, sclassList, deleteSclass, deleteSclasses, getSclassDetail, getSclassStudents } = require('../controllers/class-controller.js');
-const { complainCreate, complainList } = require('../controllers/complain-controller.js');
-const { noticeCreate, noticeList, deleteNotices, deleteNotice, updateNotice } = require('../controllers/notice-controller.js');
-const {
-    studentRegister,
-    studentLogIn,
-    getStudents,
-    getStudentDetail,
-    deleteStudents,
-    deleteStudent,
-    updateStudent,
-    studentAttendance,
-    deleteStudentsByClass,
-    updateExamResult,
-    clearAllStudentsAttendanceBySubject,
-    clearAllStudentsAttendance,
-    removeStudentAttendanceBySubject,
-    removeStudentAttendance } = require('../controllers/student_controller.js');
-const { subjectCreate, classSubjects, deleteSubjectsByClass, getSubjectDetail, deleteSubject, freeSubjectList, allSubjects, deleteSubjects } = require('../controllers/subject-controller.js');
-const { teacherRegister, teacherLogIn, getTeachers, getTeacherDetail, deleteTeachers, deleteTeachersByClass, deleteTeacher, updateTeacherSubject, teacherAttendance } = require('../controllers/teacher-controller.js');
+import { sclassCreate, sclassList, deleteSclass, deleteSclasses, getSclassDetail, getSclassStudents } from '../controllers/class-controller.js';
+import { complainCreate, complainList } from '../controllers/complain-controller.js';
+import { noticeCreate, noticeList, deleteNotices, deleteNotice, updateNotice } from '../controllers/notice-controller.js';
+import { studentRegister, studentLogIn, getStudents, getStudentDetail, deleteStudents, deleteStudent, updateStudent, studentAttendance, deleteStudentsByClass, updateExamResult, clearAllStudentsAttendanceBySubject, clearAllStudentsAttendance, removeStudentAttendanceBySubject, removeStudentAttendance } from '../controllers/student_controller.js';
+import { subjectCreate, classSubjects, deleteSubjectsByClass, getSubjectDetail, deleteSubject, freeSubjectList, allSubjects, deleteSubjects } from '../controllers/subject-controller.js';
+import { teacherRegister, teacherLogIn, getTeachers, getTeacherDetail, deleteTeachers, deleteTeachersByClass, deleteTeacher, updateTeacherSubject, teacherAttendance } from '../controllers/teacher-controller.js';
 
 // Admin
 router.post('/AdminReg', adminRegister);
@@ -116,4 +104,4 @@ router.delete("/Subject/:id", deleteSubject)
 router.delete("/Subjects/:id", deleteSubjects)
 router.delete("/SubjectsClass/:id", deleteSubjectsByClass)
 
-module.exports = router;
+export default router;

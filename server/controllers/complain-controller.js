@@ -1,4 +1,5 @@
-const Complain = require('../models/complainSchema.js');
+// import Complain, { find } from '../models/complainSchema.js';
+import Complain from '../models/complainSchema.js';
 
 const complainCreate = async (req, res) => {
     try {
@@ -12,7 +13,7 @@ const complainCreate = async (req, res) => {
 
 const complainList = async (req, res) => {
     try {
-        let complains = await Complain.find({ school: req.params.id }).populate("user", "name");
+        let complains = await find({ school: req.params.id }).populate("user", "name");
         if (complains.length > 0) {
             res.send(complains)
         } else {
@@ -23,4 +24,4 @@ const complainList = async (req, res) => {
     }
 };
 
-module.exports = { complainCreate, complainList };
+export default { complainCreate, complainList };

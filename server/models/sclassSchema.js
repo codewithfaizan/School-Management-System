@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const sclassSchema = new mongoose.Schema({
     sclassName: {
@@ -11,5 +11,5 @@ const sclassSchema = new mongoose.Schema({
     },
 }, { timestamps: true });
 
-module.exports = mongoose.model("sclass", sclassSchema);
+export default mongoose.model("sclass", sclassSchema);
 

@@ -1,6 +1,6 @@
-const Subject = require('../models/subjectSchema.js');
-const Teacher = require('../models/teacherSchema.js');
-const Student = require('../models/studentSchema.js');
+import Subject from "../models/subjectSchema.js";
+import Teacher from "../models/teacherSchema.js";
+import Student from "../models/studentSchema.js"
 
 const subjectCreate = async (req, res) => {
     try {
@@ -161,4 +161,4 @@ const deleteSubjectsByClass = async (req, res) => {
 };
 
 
-module.exports = { subjectCreate, freeSubjectList, classSubjects, getSubjectDetail, deleteSubjectsByClass, deleteSubjects, deleteSubject, allSubjects };
+export default { subjectCreate, freeSubjectList, classSubjects, getSubjectDetail, deleteSubjectsByClass, deleteSubjects, deleteSubject, allSubjects };

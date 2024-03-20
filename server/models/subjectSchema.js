@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const subjectSchema = new mongoose.Schema({
     subName: {
@@ -28,4 +28,4 @@ const subjectSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-module.exports = mongoose.model("subject", subjectSchema);
+export default mongoose.model("subject", subjectSchema);

@@ -1,5 +1,4 @@
-const Notice = require('../models/noticeSchema.js');
-
+import Notice from '../models/noticeSchema';
 const noticeCreate = async (req, res) => {
     try {
         const notice = new Notice({
@@ -59,4 +58,4 @@ const deleteNotices = async (req, res) => {
     }
 }
 
-module.exports = { noticeCreate, noticeList, updateNotice, deleteNotice, deleteNotices };
+export default { noticeCreate, noticeList, updateNotice, deleteNotice, deleteNotices };
