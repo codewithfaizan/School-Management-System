@@ -5,9 +5,11 @@
 ## Project Overview
 
 <h4 align="start">
-- Streamline school management, class organization, and add students and faculty.<br>
-- Seamlessly track attendance, assess performance, and provide feedback. <br>
-- Access records, view marks, and communicate effortlessly.
+    <ul> 
+    <li> Streamline school management, class organization, and add students and faculty. </li> 
+    <li> Seamlessly track attendance, assess performance, and provide feedback. </li>
+    <li> Access records, view marks, and communicate effortlessly. </li> 
+    </ul>
 </h4>
 
 ## About
